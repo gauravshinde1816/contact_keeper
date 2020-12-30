@@ -12,7 +12,7 @@ const AlertState = (props) => {
 
   //set alert
 
-  const setAlert = (msg, type, timeout = 5000) => {
+  const setAlert = (msg, type) => {
     const id = uuid();
 
     dispatch({
@@ -20,7 +20,7 @@ const AlertState = (props) => {
       payload: { msg, type, id },
     });
 
-    setTimeout(() => dispatch({ type: REMOVE_ALERT, payload: id }), timeout);
+    setTimeout(() => dispatch({ type: REMOVE_ALERT, payload: id }), 5000);
   };
 
   //remove alert

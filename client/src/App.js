@@ -7,6 +7,7 @@ import ContactState from "./context/contact/ContactState";
 import AuthState from "./context/auth/AuthState";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
+import Alerts from "./components/layout/Alerts";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AlertState from "./context/alert/AlertState";
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
             <Fragment>
               <Navbar />
               <div className="container">
+                <Alerts />
                 <Switch>
                   <Route exact path="/" component={Home} />
                   <Route exact path="/about" component={About} />
